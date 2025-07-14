@@ -1,0 +1,51 @@
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: my-postgres
+    environment:
+      POSTGRES_DB: toolsdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - vibetools-network
+
+  tools-api:
+    build:
+      context: .
+      dockerfile: Tools.API/Dockerfile
+    container_name: tools-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Database=Server=postgres;Port=5432;Database=toolsdb;User Id=postgres;Password=postgres;Include Error Detail=true
+    ports:
+      - "5015:8080"
+    depends_on:
+      - postgres
+    networks:
+      - vibetools-network
+
+  tools-web:
+    build:
+      context: ./tools.web
+      dockerfile: Dockerfile
+    container_name: tools-web
+    environment:
+      - VITE_API_URL=http://tools-api:8080
+    ports:
+      - "5173:80"
+    depends_on:
+      - tools-api
+    networks:
+      - vibetools-network
+
+volumes:
+  postgres_data:
+
+networks:
+  vibetools-network:
+    driver: bridge

@@ -1,0 +1,15 @@
+﻿global using Carter;
+global using Mapster;
+global using MediatR;
+global using BuildingBlocks.CQRS;
+global using Tools.API.Models;
+global using Marten;
+global using Tools.API.Exceptions;
+global using FluentValidation;
+global using BuildingBlocks.Exceptions;
+global using BuildingBlocks.Behaviours;
+global using BuildingBlocks.Exceptions.Handler;
+global using Tools.API.Data;
+global using Marten.Pagination;
+global using Tools.API.Models.DTOs;
+global using Marten.Schema;
