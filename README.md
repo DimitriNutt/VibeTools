@@ -27,6 +27,7 @@ VibeTools is a simple directory for discovering, submitting, and reviewing trend
 
 ### Run with Docker (Recommended)
 ```powershell
+# Run in root folder where docker-compose.yml file resides
 # Start the full stack (database, API, and web)
 docker-compose up -d
 ```
