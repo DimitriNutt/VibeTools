@@ -45,6 +45,10 @@ docker-compose up -d
 - `DELETE /tool/{id}` – Delete tool
 - `GET /tools/category/{category}` – Tools by category
 
+##
+
+![image info](./vibetools_sequence-diagram.png)
+
 ### Project Structure
 ```
 VibeTools/

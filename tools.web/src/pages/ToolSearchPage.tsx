@@ -64,7 +64,9 @@ export default function ToolSearchPage() {
             {searched && !loading && results.length === 0 && (
                 <div style={{ color: '#888', marginBottom: 12 }}>No tools found for your search.</div>
             )}
-            <ToolGrid tools={results} />
+            {searched && !loading && results.length > 0 && (
+                <ToolGrid tools={results} />
+            )}
         </div>
     );
 }
