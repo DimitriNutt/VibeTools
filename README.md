@@ -21,9 +21,7 @@ VibeTools is a simple directory for discovering, submitting, and reviewing trend
 ## Quick Start
 
 ### Prerequisites
-- .NET 8 SDK
 - Docker Desktop
-- PowerShell (for Windows)
 
 ### Run with Docker (Recommended)
 ```powershell
