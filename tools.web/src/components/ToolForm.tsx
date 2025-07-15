@@ -36,13 +36,13 @@ export default function ToolForm({
     return (
         <form onSubmit={handleSubmit}>
             <div style={{ marginBottom: 12 }}>
-                <input type="text" name="name" placeholder="Name" value={values.name} onChange={handleChange} required style={{ width: '100%' }} />
+                <input type="text" name="name" placeholder="Name" value={values.name} onChange={handleChange} required style={{ width: '100%', padding: 8, fontSize: 16 }} />
             </div>
             <div style={{ marginBottom: 12 }}>
-                <input type="text" name="category" placeholder="Category (comma separated)" value={values.category} onChange={handleChange} style={{ width: '100%' }} />
+                <input type="text" name="category" placeholder="Category (comma separated)" value={values.category} onChange={handleChange} style={{ width: '100%', padding: 8, fontSize: 16 }} />
             </div>
             <div style={{ marginBottom: 12 }}>
-                <textarea name="description" placeholder="Description" value={values.description} onChange={handleChange} rows={6} style={{ width: '100%' }} />
+                <textarea name="description" placeholder="Description" value={values.description} onChange={handleChange} rows={6} style={{ width: '100%', padding: 8, fontSize: 16 }} />
             </div>
             {error && <div style={{ color: 'red', marginBottom: 12 }}>{error}</div>}
             <button type="submit" disabled={loading}>{loading ? 'Saving...' : submitLabel}</button>
