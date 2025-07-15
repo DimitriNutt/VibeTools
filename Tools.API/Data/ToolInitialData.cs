@@ -30,7 +30,7 @@
                     Category = ["AI Platform"]
                 },
                 new() {
-                    Id = new Guid("5334c996-8457-4cf0-815c-ed2b77c4ff61"),
+                    Id = new Guid("01980a23-8457-4cf0-815c-939cfc0012f2"),
                     Name = "Google Gemini",
                     Description = "Meet Gemini, your personal AI assistant.",
                     Category = ["AI assistant"]
